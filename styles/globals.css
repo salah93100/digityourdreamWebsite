@@ -1,26 +1,43 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes scroll {
+  0% {
+    left: 0;
   }
-  body {
-    color: white;
-    background: black;
+  100% {
+    left: -100%;
   }
+}
+
+*{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+.animate {
+  animation: scroll 20s linear infinite;
+}
+
+.btn{
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-blue{
+  @apply bg-blue-600 text-white;
+}
+
+.btn-grey{
+  @apply bg-neutral-600	text-white;
+}
+
+
+.h1{
+  font-size: 68px;
+}
+
+.block-text{
+  font-size: 17px;
 }
