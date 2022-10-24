@@ -1,0 +1,99 @@
+import {React,useState,useEffect} from 'react'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/material.css'
+import { BiPhoneCall } from '@react-icons/all-files/Bi/BiPhoneCall';
+
+
+
+
+
+export default function FormTel() {
+   const [valueTel,setValueTel] =useState({})
+   const [disabledSubmit,setDisabledSubmit] = useState(false)
+   const [formErrors,setFormErrors] = useState({})
+   const [formSent,setFormSent] = useState(false)
+
+
+   const validate=(values)=>{
+    const errors = {};
+   if (values.phoneNumber.length===0){
+    errors.phonenumber="Le numéro de téléphone ne doit pas être vide";
+   }
+   return errors
+   }
+   
+  
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    setFormErrors(validate(valueTel));
+   if(Object.keys(formErrors).length>0){
+    setFormSent(true)
+   }
+    
+ 
+    }
+
+
+  
+    const handlePhoneNumber=(phone)=>{
+        setValueTel({phoneNumber:`${phone}`})
+     if(phone.length>0){
+      setDisabledSubmit(false)
+     }
+    }    
+
+   
+  return (
+    <div className="w-full">
+    <form className="w-full max-w-sm lg:max-w-lg px-3 lg:px-0" onSubmit={handleSubmit}>
+    {console.log(Object.keys(formErrors).length)}
+    <div className="flex items-center ">
+
+       {!formSent ?(
+        <>
+         <PhoneInput
+                containerClass="shadow-xl flex flex-wrap "
+                inputClass=""
+                buttonClass=""
+                country={"fr"}
+                placeholder="Entre votre numéro de tel ..."
+                value={valueTel.phoneNumber}
+                onChange={(phone) => handlePhoneNumber(phone)}
+                inputProps={{
+                    name: 'phone',
+                    required: false,
+                    autoFocus: true
+                  }}
+                />
+                {formErrors && formErrors.phonenumber && (
+                  <span className='absolute text-slate-800 text-sm mt-24'>
+                    {formErrors.phonenumber}
+                  </span>
+                )}
+       
+  <div>
+      <button
+        className="flex items-center lg:flex-row py-3  px-2 lg:py-3.5 lg:px-6 shadow-xl ml-1 rounded-r-md transition duration-300 bg-neutral-800	 text-white "
+        type="submit"
+        value="Submit"
+        disabled={disabledSubmit}
+      >
+        <BiPhoneCall className='lg:hidden' size={30}/>
+       <span className='hidden lg:block'> Devis Maintenant</span>
+      </button>
+      </div>
+      </> ):(
+         <div className="w-full h-full flex items-center justify-center">
+         <p className="text-center">
+           Votre message a bien été envoyé. Nous vous recontacterons dans
+           les plus brefs délais.
+         </p>
+       </div>
+      )}
+      </div>
+    </form>
+  </div>
+
+  )
+}
