@@ -10,17 +10,17 @@ import { MdClose } from '@react-icons/all-files/md/MdClose';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className=" w-full fixed lg:relative z-50 mb-8 top-0 h-20 sticky">
+    <div className="z-50 mb-8 top-0 h-20 ">
      
-        <nav className="w-full fixed lg:relative  navbg lg:px-4 lg:p-1 items-center flex flex-row flex-wrap lg:justify-around justify-between">
-        <div className="w-full flex flex-row flex-wrap items-center justify-between lg:justify-around relative ">
+        <nav className="w-full fixed lg:relative  navbg lg:px-4 lg:p-1 items-center  lg:justify-around justify-between z-50  ">
+        <div className="w-full flex flex-row flex-wrap items-center justify-between md:justify-around relative mx-auto ">
           
             <div className='flex mx-3 lg:mx-0'>
          
          <Link href="/"><a> <Image src={profilePic}  className="h-10 inline cursor-pointer " alt='Digityourdream'/> </a></Link> 
            </div>
         
-           <button className='flex  lg:hidden text-white'
+           <button className='flex  lg:hidden text-white '
             onClick={ () => setMenuOpen(!menuOpen)}> 
             {menuOpen===false ?( 
             <GiHamburgerMenu size={30}/>

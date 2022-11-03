@@ -3,33 +3,35 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import logoDev from "../public/dev.svg";
 import { BiCodeBlock } from "@react-icons/all-files/bi/BiCodeBlock";
+import { UrlFor } from '../lib/sanity';
 
-export default function ServicesWork() {
-    const services=[1,2,3,4]
+
+
+
+export default function ServicesWork({props}) {
   return (
     <motion.div
     initial={{opacity:0}} 
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
-    className='h-[calc(100vh+10.5rem)] relative flex overflow-hidden flex-col text-center md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-                <h3 className='absolute uppercase top-24 tracking-[20px] text-white text-2xl -mr-5'>Nos services</h3>
+    className='md:h-[calc(100vh+10.5rem)] my-5 relative flex overflow-hidden flex-col text-center md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+                <h3 className='absolute uppercase top-24 tracking-[20px] text-white text-2xl '>Nos services</h3>
+
                 <motion.div 
                  initial={{opacity:0}} 
                  whileInView={{opacity:1}}
                  transition={{duration:1.5}}
-                 className="container mx-auto grid grid-cols-1 md:grid-cols-4 justify-start  xl:justify-center   ">
-                    {services.map((service,i)=>(
-                     <div key={i} className="flex flex-col  lg:mx-5 lg:py-6 max-w-sm box-border overflow-hidden shadow-lg  ">
-                
-                     <div className='border-white border-2 rounded-full p-5 flex justify-center	my-5 mx-auto'>
+                 className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-start  xl:justify-center mb-24 gap-8 md:gap-16 xl:gap-2 mt-52 md:mt-0">
+                    {props.map((service,i)=>(
+                     <div key={i} className="rounded-sm flex flex-col mx-9 md:mx-3 lg:mx-5 lg:py-6 max-w-sm box-border overflow-hidden shadow-xl border border-[#EEEEEE] border-1 bg-[#f7f7ff] ">
+                     <div className=' p-2  flex justify-center	my-2 '>
                          
-                     <BiCodeBlock size={35} color="rgb(38 38 38)"/>
-                   </div>
+                  <Image src={UrlFor(service.photo).url()} width={40} height={40} alt="{data.name}" className='after' />
+                  
+                            </div>
                    <div className='px-6 py-4 space-y-4'>
-                     <h2 className='text-2xl text-white font-semibold px-5'>Web <span className='text-neutral-800'>Développement</span></h2>
-                     <p className='text-white text-center mt-3'>Soyez visible à chaque étape du parcours utilisateur de vos
-                     prospects et transformez-les en nouveaux clients. Une stratégie
-                     en référencement naturel adaptée à vos objectifs Business.</p>
+                     <h2 className='text-2xl text-black font-semibold px-5'>{service.name} </h2>
+                     <p className='text-neutral-500 text-center mt-3 leading-10'>{service.textdescription}</p>
                    </div>
                    
      
