@@ -1,8 +1,7 @@
 import {React,useState,useEffect} from 'react'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/material.css'
+import PhoneInput from "@fortawesome/fontawesome-svg-core"
+import "react-phone-input-2/lib/material.css"
 import { BiPhoneCall } from '@react-icons/all-files/Bi/BiPhoneCall';
-import { sanityClient } from '../lib/sanity';
 import { AiOutlineCheckCircle } from '@react-icons/all-files/ai/AiOutlineCheckCircle';
 
 
