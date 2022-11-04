@@ -19,7 +19,7 @@ export default function FormTel() {
    const validate=(values)=>{
     const errors = {};
    if ( values.phoneNumber?.length===0 ||values.phoneNumber?.length<4 ||Object.keys(valueTel).length===0 ){
-    errors.phonenumber="Le numéro de téléphone ne doit pas être vide";
+    errors.phonenumber="Le numéro de téléphone ne doit pas être vide l";
    }
    return{ errors,
    valid: Object.keys(errors).length < 1}

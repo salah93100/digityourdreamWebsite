@@ -8,7 +8,6 @@ import profilePic from "../public/hero (1).png";
 import logoDev from "../public/dev.svg";
 import logoGraph from "../public/graph.svg";
 import logoLaptop from "../public/laptop.svg";
-import PhotoTestimonial from "../public/myLevel.png";
 import Link from "next/link";
 import SlideHome from "../components/SlideHome";
 import { BsArrowRight } from "@react-icons/all-files/bs/BsArrowRight";
