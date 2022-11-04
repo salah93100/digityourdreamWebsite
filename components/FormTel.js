@@ -1,5 +1,5 @@
 import {React,useState,useEffect} from 'react'
-import PhoneInput from "@fortawesome/fontawesome-svg-core"
+import PhoneInput from "react-phone-input-2"
 import "react-phone-input-2/lib/material.css"
 import { BiPhoneCall } from '@react-icons/all-files/Bi/BiPhoneCall';
 import { AiOutlineCheckCircle } from '@react-icons/all-files/ai/AiOutlineCheckCircle';
@@ -19,7 +19,7 @@ export default function FormTel() {
    const validate=(values)=>{
     const errors = {};
    if ( values.phoneNumber?.length===0 ||values.phoneNumber?.length<4 ||Object.keys(valueTel).length===0 ){
-    errors.phonenumber="Le numéro de téléphone ne doit pas être vide l";
+    errors.phonenumber="Le numéro de téléphone ne doit pas être vide";
    }
    return{ errors,
    valid: Object.keys(errors).length < 1}
