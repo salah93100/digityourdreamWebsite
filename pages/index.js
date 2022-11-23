@@ -57,27 +57,25 @@ export default function Home({recipies}) {
       </header>
       <main className="">
      
-        <section className="container mx-auto  lg:ml-10 lg:px-16 mt-20 ">
-          <div className="lg:mt-24 flex flex-col-reverse justify-center  lg:flex-row  pb-10 mt-8">
+        <section className="container mx-auto  lg:ml-10 lg:px-16 mt-20">
+          <div className="lg:mt-24 flex flex-col-reverse justify-center lg:flex-row  pb-10 mt-8 ">
             <motion.div 
                 initial={{x:-200, opacity:0}} 
                 transition={{duration:1.2,}}
                 whileInView={{opacity:1,x:0}}
-                viewport={{once:true}} className="flex flex-1 flex-col items-center md:items-start mt-28 lg:mt-10 space-y-6 lg:space-y-8 ">
+                viewport={{once:true}} className="flex flex-1 flex-col items-center md:items-start mt-28 lg:mt-10 space-y-6 lg:space-y-8">
               <h1 className="text-4xl px-4  lg:px-0 md:text-xl lg:text-7xl font-bold text-start text-white flex-nowrap ">
              {recipies[0].titlehero}
               </h1>
               <div className="px-4 lg:px-0 lg:w-4/5">
                 <p className="text-start lg:text-xl text-white  ">
+              {recipies[0].texthero}
                  
-                  De la petite entreprise au plus importante startup nous nous
-                  ocuppons de vos projets digital Application web, logiciel
-                  surmesure,plateformes en ligne..
                 </p>
               </div>
            <FormTel/>
             </motion.div >
-            <div className="flex justify-center flex-1 hidden lg:block">
+            <div className="flex justify-center flex-1 hidden lg:block pb-2 lg:pb-12">
               <motion.img
           initial={{y:-200, opacity:0}} 
           transition={{duration:1.2,}}
@@ -111,11 +109,11 @@ export default function Home({recipies}) {
             <div className="mt-2">
               <p className="block-text">
                 <span className="font-bold">
-                  AVOIR UNE Aide pour votre projet.
+                Stratégie & conception.
                 </span>
-                Soyez visible à chaque étape du parcours utilisateur de vos
-                prospects et transformez-les en nouveaux clients. Une stratégie
-                en référencement naturel adaptée à vos objectifs Business.
+                Nous commençons par une prise en main de votre projet afin de plonger dans votre univers.
+Ensemble, nous mettons en pratique vos idées dans le but d’en faire une solution digital.
+
               </p>
             </div>
             <div className="flex flex-row items-center text-blue-600	 hover:gap-2 mt-3">
@@ -140,11 +138,11 @@ export default function Home({recipies}) {
             <div className="mt-2">
               <p className="block-text tex-sm">
                 <span className="font-bold">
-                  Un logiciel performant et perso.
+                Développement sur mesure.
                 </span>
-                Soyez visible à chaque étape du parcours utilisateur de vos
-                prospects et transformez-les en nouveaux clients. Une stratégie
-                en référencement naturel adaptée à vos objectifs Business.
+                Nous collaborons avec vous en devenant votre équipe tech pour vous accompagner et vous conseiller techniquement.
+Nous privilégions les solutions open sources fiables selon le besoin de votre projet : React / Symfony / Laravel / Node JS / React / Next JS / et des solutions innovantes comme les CMS headless (Strapi, Sanity, ...) .
+
               </p>
             </div>
             <div className="flex flex-row items-center mt-3 text-blue-600	 hover:gap-2 hover:duration-1000">
@@ -170,11 +168,10 @@ export default function Home({recipies}) {
             <div className="mt-2 ">
               <p className="block-text">
                 <span className="font-bold">
-                  Solution performante rour en réduisant le coût.
+                Accompagnement & conseil.
                 </span>
-                Soyez visible à chaque étape du parcours utilisateur de vos
-                prospects et transformez-les en nouveaux clients. Une stratégie
-                en référencement naturel adaptée à vos objectifs Business.
+                Pour assurer le succès de votre produit digital,
+                 nous tâchons de comprendre vos enjeux business et de clarifier les objectifs auxquels va devoir répondre le produit.
               </p>
             </div>
             <div className="flex flex-row items-center mt-3 text-blue-600	hover:gap-2 transition duration-300  ">

@@ -74,7 +74,7 @@ export default function MultiSlider({props}) {
  return(  
  <div key={i} className='flex flex-row flex-wrap lg:flex-nowrap lg:my-10 mx-auto items-center justify-center gap-4 p-4 lg:p-10 min-h-full display  flex-forced'>
         <div className='flex flex-col lg:max-w-lg'>
-        <Image src={UrlFor(img.photo).url()} width={400} height={400} className="" />
+        <Image src={UrlFor(img.photo).url()} width={300} height={300} className="" alt="Testimonial Image" />
         </div>
         <div className='flex flex-col max-w-lg p-2'>
            <p className='lg:text-3xl  mb-3 font-semibold'>
