@@ -26,7 +26,7 @@ export default function ServicesWork({props}) {
                      <div key={i} className="rounded-sm flex flex-col mx-9 md:mx-3 lg:mx-5 lg:py-6 max-w-sm box-border overflow-hidden shadow-xl border border-[#EEEEEE] border-1 bg-[#f7f7ff] ">
                      <div className=' p-2  flex justify-center	my-2 '>
                          
-                  <Image src={UrlFor(service.photo).url()} width={50} height={50} alt="{data.name}" className='after' />
+                  <Image src={UrlFor(service.photo).url()} width={35} height={34} alt="{data.name}" className='after' />
                   
                             </div>
                    <div className='p-4 space-y-4'>

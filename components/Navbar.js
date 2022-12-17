@@ -44,7 +44,7 @@ export default function Navbar() {
 
             </div>
             <div className='lg:block hidden'>
-           <button className='btn-blue text-white px-6 py-3 rounded-md image-clignote hover:text-blue-600 hover:bg-white' >Contactez-nous</button>
+           <Link href="/contact"><button className='btn-blue text-white px-6 py-3 rounded-md image-clignote hover:text-blue-600 hover:bg-white' >Contactez-nous</button></Link>
            </div>
          
            </div> 

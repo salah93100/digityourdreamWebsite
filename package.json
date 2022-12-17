@@ -21,6 +21,7 @@
     "next-sanity": "^1.0.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.40.0",
     "react-icons": "^4.6.0",
     "react-multi-carousel": "^2.8.2",
     "react-phone-input-2": "^2.15.1",

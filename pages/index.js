@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"; 
 import profilePic from "../public/hero (1).png";
 import logoDev from "../public/dev.svg";
-import logoGraph from "../public/graph.svg";
 import logoLaptop from "../public/laptop.svg";
 import Link from "next/link";
 import SlideHome from "../components/SlideHome";
@@ -14,7 +13,8 @@ import { BsArrowRight } from "@react-icons/all-files/bs/BsArrowRight";
 import FormTel from "../components/FormTel";
 import MultiSlider from "../components/Testiomnial";
 import { motion } from "framer-motion";
-import  {sanityClient,UrlFor}  from "../lib/sanity"
+import  {sanityClient,UrlFor}  from "../lib/sanity";
+import LogoStrategie from "../public/Sans titre.svg"
 const recipesQuery=`*[_type== "homepage"]{
   "TestimonialCaroussel":*[_type== "testimonial"]{
   content,
@@ -99,10 +99,10 @@ export default function Home({recipies}) {
                 className="flex flex-col m-5 lg:m-10 max-w-sm md:max-w-xs xl:max-w-sm box-border">
             <div className="">
               <Image
-                src={logoDev}
+                src={LogoStrategie}
                 className="lg:h-5/6"
-                width={25}
-                height={25}
+                width={35}
+                height={35}
                 alt="logo design"
               />
             </div>
@@ -127,8 +127,8 @@ Ensemble, nous mettons en pratique vos idées dans le but d’en faire une solut
             whileInView={{opacity:1,y:0}}
             viewport={{once:true}}   className="flex flex-col m-5 lg:m-10 max-w-sm md:max-w-xs xl:max-w-sm box-border">
             <div className="">
-              <motion.img
-                src={logoGraph}
+              <Image
+                src={logoDev}
                 className="lg:h-5/6"
                 width={25}
                 height={25}
@@ -204,7 +204,7 @@ Nous privilégions les solutions open sources fiables selon le besoin de votre p
               </p>
             </div>
             <div className="flex ">
-            <button className="btn btn-blue mt-1">Contactez-nous</button>
+           <button className="btn btn-blue mt-1"> <Link href="/contact">Contactez-nous</Link></button>
             </div>
           </motion.div>
         </div>
@@ -223,7 +223,7 @@ Nous privilégions les solutions open sources fiables selon le besoin de votre p
               {recipies[0].section[1].content}
               </p>
             </div>
-            <button className="btn btn-blue mt-1 ">Contactez-nous</button>
+            <button className="btn btn-blue mt-1 "><Link href="/contact"> Contactez-nous </Link> </button>
           </motion.div>
           <div className="max-w-xl mx-1 lg:m-10">
             <motion.img

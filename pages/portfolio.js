@@ -22,7 +22,6 @@ export default function portfolio({recipies}) {
     <div className="backgroundWebsite ">
     <Navbar/>
     <section className='snap-start '>
-      {console.log(recipies)}
        <Project props={recipies}/> 
     </section>
     <Footer/>
