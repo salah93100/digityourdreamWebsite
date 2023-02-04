@@ -57,14 +57,14 @@ export default function Home({recipies}) {
       </header>
       <main className="">
      
-        <section className="container mx-auto  lg:ml-10 lg:px-16 mt-20">
-          <div className="lg:mt-24 flex flex-col-reverse justify-center lg:flex-row  pb-10 mt-8 ">
+        <section className="container mx-auto  lg:ml-10 lg:px-16 mt-20 lg:mt-0  md:py-8">
+          <div className=" flex flex-col-reverse justify-center md:flex-row items-center">
             <motion.div 
                 initial={{x:-200, opacity:0}} 
-                transition={{duration:1.2,}}
+                transition={{duration:1.2}}
                 whileInView={{opacity:1,x:0}}
-                viewport={{once:true}} className="flex flex-1 flex-col items-center md:items-start mt-28 lg:mt-10 space-y-6 lg:space-y-8">
-              <h1 className="text-4xl px-4  lg:px-0 md:text-xl lg:text-7xl font-bold text-start text-white flex-nowrap ">
+                viewport={{once:true}} className="flex flex-1 flex-col items-center md:items-start mt-28 md:mt-16 lg:mt-6 space-y-6 lg:space-y-8 mb-16">
+              <h1 className="text-4xl px-4  lg:px-0 md:text-4xl lg:text-6xl xl:text-7xl font-bold text-start text-white flex-nowrap ">
              {recipies[0].titlehero}
               </h1>
               <div className="px-4 lg:px-0 lg:w-4/5">
@@ -75,12 +75,12 @@ export default function Home({recipies}) {
               </div>
            <FormTel/>
             </motion.div >
-            <div className="flex justify-center flex-1 hidden lg:block pb-2 lg:pb-12">
+            <div className="flex justify-center flex-1 hidden md:block pb-2 lg:pb-12">
               <motion.img
           initial={{y:-200, opacity:0}} 
-          transition={{duration:1.2,}}
+          transition={{duration:1.2}}
           whileInView={{opacity:1,y:0}}
-          viewport={{once:true}} src={UrlFor(recipies[0].photohero).url()} className="lg:-mt-10 " />
+          viewport={{once:true}} src={UrlFor(recipies[0].photohero).url()} className=" md:max-w-sm lg:max-w-lg xl:max-w-[630px]" />
             </div>
           </div>
         </section>
@@ -90,7 +90,7 @@ export default function Home({recipies}) {
 <SlideHome props={recipies[0].arrayCaroussel} /> 
   
       <section className="bg-[#F9F9F9] lg:px-7 py-8 lg:py-16">
-        <div className="container mx-auto flex flex-row flex-wrap justify-start  xl:justify-center  lg:p-4 items-stretch gap-2 ">
+        <div className="container mx-auto flex flex-col md:flex-row  justify-start  xl:justify-center  lg:p-4 gap-2 ">
           <motion.div 
                 initial={{y:-300, opacity:0}} 
                 transition={{duration:1.2,}}
@@ -182,19 +182,19 @@ Nous privilégions les solutions open sources fiables selon le besoin de votre p
         </div>
       </section>
 
-      <section className="lg:p-5 p-1">
-        <div className="lg:my-0 mb-6  mx-auto flex flex-col flex-wrap items-center  lg:text-start justify-center xl:flex-row xl:gap-16 p-0">
-          <div className="max-w-xl px-5 lg:px-0 lg:m-10">
+      <section className="lg:p-5 p-1 my-2">
+        <div className="mb-6  mx-auto flex flex-col  items-center justify-center lg:my-0  lg:text-start  md:flex-row xl:gap-16 p-0">
+          <div className="max-w-xl px-5 lg:px-0 xl:m-10 lg:m-4">
            <motion.img
           initial={{x:-200, opacity:0}} 
           transition={{duration:1.2,}}
           whileInView={{opacity:1,x:0}}
-          viewport={{once:true}} src={UrlFor(recipies[0].section[0].photo).url()} width={500} height={500} className=""   alt="logo design"/>
+          viewport={{once:true}} src={UrlFor(recipies[0].section[0].photo).url()} className="max-w-sm lg:max-w-xl"   alt="logo design"/>
 
           </div>
           <motion.div initial={{opacity:0}} 
     whileInView={{opacity:1}}
-    transition={{duration:1.5}} className="flex flex-col items-center lg:items-start max-w-xl m-4 lg:m-10">
+    transition={{duration:1.5}} className=" flex flex-col md:items-start items-center md:max-w-md lg:max-w-lg xl:max-w-xl lg:m-4 mx-4 md:mx-6">
             <h2 className="text-3xl lg:text-4xl	font-semibold ">
              {recipies[0].section[0].title}
             </h2>
@@ -210,22 +210,22 @@ Nous privilégions les solutions open sources fiables selon le besoin de votre p
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] lg:p-5 p-1 ">
-        <div className="lg:my-0 mb-6 lg:mb-0 mx-auto flex flex-col-reverse flex-wrap items-center justify-start xl:justify-center xl:flex-row xl:gap-16 p-0">
+      <section className="bg-[#F9F9F9] lg:p-5 p-1 my-2">
+        <div className="mb-6  mx-auto flex flex-col  items-center justify-center lg:my-0  md:text-start  md:flex-row xl:gap-16 p-0">
          <motion.div initial={{opacity:0}} 
     whileInView={{opacity:1}}
-    transition={{duration:1.5}}  className=" flex flex-col items-center lg:items-start max-w-xl m-4 lg:m-10">
-            <h2 className="text-3xl lg:text-4xl	font-semibold ">
+    transition={{duration:1.5}}  className=" flex flex-col md:items-start items-center md:max-w-md lg:max-w-lg xl:max-w-xl lg:m-4 mx-4 md:mx-6">
+            <h2 className="text-3xl  lg:text-4xl	font-semibold ">
             {recipies[0].section[1].title}
             </h2>
-            <div className="my-5 flex flex-col gap-4">
+            <div className="my-5 flex flex-col gap-4 ">
               <p className="leading-9">
               {recipies[0].section[1].content}
               </p>
             </div>
             <button className="btn btn-blue mt-1 "><Link href="/contact"> Contactez-nous </Link> </button>
           </motion.div>
-          <div className="max-w-xl mx-1 lg:m-10">
+          <div className="max-w-xl px-5 lg:px-0 xl:m-10 lg:m-4">
             <motion.img
           initial={{x:200, opacity:0}} 
           transition={{duration:1.2,}}

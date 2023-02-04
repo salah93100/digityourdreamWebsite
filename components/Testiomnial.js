@@ -73,8 +73,11 @@ export default function MultiSlider({props}) {
 {props.map((img,i)=>{
  return(  
  <div key={i} className='flex flex-row flex-wrap lg:flex-nowrap lg:my-10 mx-auto items-center justify-center gap-4 p-4 lg:p-10 min-h-full display  flex-forced space-y-4 md:'>
-        <div className='flex flex-col lg:max-w-lg hidden md:block'>
-        <Image src={UrlFor(img.photo).url()} width={250} height={250} className="" alt="Testimonial Image" />
+        <div className='relative h-64 w-64 flex flex-col lg:max-w-lg hidden md:block '>
+        <Image src={UrlFor(img.photo).url()} 
+        layout="fill" 
+        objectFit="contain"
+        className="" alt="Testimonial Image" />
         </div>
         <div className='flex flex-col max-w-lg p-2'>
            <p className='lg:text-3xl  mb-3 font-semibold'>

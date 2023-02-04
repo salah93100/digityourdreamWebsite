@@ -28,8 +28,8 @@ export default function Project({props}) {
                      height={500}
                      alt='' />
                     <div className='text-white '>
-                      <h4 className='text-4xl font-semibold text-center md:text-start '> <span className='underline '>Projet numéro {i+1} sur {Object.keys(props).length} :</span> {project.name}</h4>
-                    <p className='text-lg text-center md:text-left max-w-2xl leading-8 md:leading-9 md:mb-10 md:mt-4'>Nous avons réaliser X et Machin chouette
+                      <h4 className='text-4xl font-semibold text-center md:text-start '> <span className='underline '>Projet N° {i+1} sur {Object.keys(props).length} :</span> {project.name}</h4>
+                    <p className='text-lg text-center md:text-left max-w-2xl leading-8 md:leading-9 md:mb-10 md:mt-4'>
                     {project.text}
                     </p>
                     </div>
