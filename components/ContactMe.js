@@ -9,16 +9,16 @@ import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail'
 export default function ContactMe({props}) {
     const { register, handleSubmit,formState: {errors}, watch, } = useForm();
     const onSubmit = formData => (
-        window.location.href=`mailto:contact@digityourdream.fr?subject=Devis pour ${formData.nameSocial}.&body=Bonjour je m'appelle${""} ${formData.name}. Je voudrais réaliser le projet suivant:${formData.Project} (${formData.email}).
+        window.location.href=`mailto:contact@digityourdream.fr?subject=Devis pour ${formData.nameSocial}.&body=Bonjour je m'appelle${""} ${formData.name}. Je voudrais réaliser le projet suivant:${formData.project} .
         `
     )
   return (
     <div className='h-screen flex relative flex-col text-center md:flex-row md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center'>
-                <h3 className='absolute uppercase top-16 tracking-[10px] md:tracking-[18px] text-white text-2xl -mr-5'>
+                <h3 className='absolute uppercase top-16 md:top-12 tracking-[10px] md:tracking-[18px] text-white text-2xl -mr-5'>
                     Contactez-nous
                 </h3>
                 {console.log(register)}
-        <div className='flex flex-col space-y-12'>
+        <div className='flex flex-col space-y-12 mt-12'>
             
             <div className='space-y-10'>
                   <div className='flex items-center md:space-x-5 justify-center  text-white'>
